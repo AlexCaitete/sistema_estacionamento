@@ -6,12 +6,14 @@ public class Veiculo {
     private String placa;
     private String modelo;
     private String marca;
+    private TipoVeiculo tipo;
 
-    public Veiculo( long id, String placa, String modelo, String marca) {
+    public Veiculo( long id, String placa, String modelo, String marca, TipoVeiculo tipo) {
         this.id = id;
         this.placa = placa;
         this.modelo = modelo;
         this.marca = marca;
+        this.tipo = tipo;
     }
 
     public Long getId() {
@@ -28,5 +30,9 @@ public class Veiculo {
 
     public String getMarca() {
         return marca;
+    }
+
+    public TipoVeiculo getTipo() {
+        return tipo;
     }
 }

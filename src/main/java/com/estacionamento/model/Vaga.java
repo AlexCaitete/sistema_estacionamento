@@ -5,11 +5,13 @@ public class Vaga {
     private Long id;
     private String numero;
     private  boolean disponivel;
+    private TipoVeiculo tipoVeiculo;
 
-    public Vaga(Long id, String numero, boolean disponivel) {
+    public Vaga(Long id, String numero, boolean disponivel, TipoVeiculo tipoVeiculo) {
         this.id = id;
         this.numero = numero;
         this.disponivel = true;
+        this.tipoVeiculo = tipoVeiculo;
     }
 
     public long getId() {
@@ -23,5 +25,9 @@ public class Vaga {
     }
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public TipoVeiculo getTipoVeiculo() {
+        return tipoVeiculo;
     }
 }
