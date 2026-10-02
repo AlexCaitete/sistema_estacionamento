@@ -1,5 +1,6 @@
 package com.estacionamento.controller;
 
+import org.springframework.web.bind.annotation.RestController;
 import com.estacionamento.model.Permanencia;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,7 +26,7 @@ public class PermanenciaController {
                 dados.get("idVaga"));
     }
 
-    @PostMapping("/{id}/saida")
+    @PutMapping("/{id}/saida")
     public Permanencia registrarSaida(@PathVariable Long id) {
         return service.registrarSaida(id);
     }
