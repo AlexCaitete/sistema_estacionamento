@@ -26,7 +26,7 @@ public class VeiculoRepository {
     }
     public Veiculo buscarPorPlaca(String placa) {
         for (Veiculo veiculo : veiculos) {
-            if (veiculo.getPlaca().equals(placa)) {
+            if (veiculo.getPlaca().equalsIgnoreCase(placa)) {
                 return veiculo;
             }
 
