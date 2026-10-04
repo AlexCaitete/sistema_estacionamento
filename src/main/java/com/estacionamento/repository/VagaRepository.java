@@ -18,7 +18,7 @@ public class VagaRepository {
     }
     public Vaga buscarPorId(Long id) {
         for (Vaga vaga : vagas) {
-            if (vaga.getId() == id) {
+            if (vaga.getId().equals(id)) {
                 return vaga;
             }
         }
