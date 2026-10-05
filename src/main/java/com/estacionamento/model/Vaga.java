@@ -14,7 +14,7 @@ public class Vaga {
         this.tipoSuportado = tipoVeiculo;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
     public String getNumero() {
