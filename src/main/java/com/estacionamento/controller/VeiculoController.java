@@ -17,13 +17,13 @@ public class VeiculoController {
     }
 
     @PostMapping
-    public Veiculo cadastrar(@RequestBody Veiculo veiculo) {
-        return service.cadastrar(veiculo);
+    public void cadastrar(@RequestBody Veiculo veiculo) {
+         service.cadastrar(veiculo);
     }
 
     @GetMapping
     public List<Veiculo> listar() {
-        return service.listar();
+        return service.listarTodos();
     }
 
     @GetMapping("/{id}")
