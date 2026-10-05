@@ -1,13 +1,13 @@
 package com.estacionamento.controller;
 
-import org.springframework.web.bind.annotation.RestController;
 import com.estacionamento.model.Permanencia;
+import com.estacionamento.service.PermanenciaService;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
-
 
 @RestController
 @RequestMapping("/permanencias")
@@ -20,10 +20,13 @@ public class PermanenciaController {
     }
 
     @PostMapping("/entrada")
-    public Permanencia registrarEntrada(@RequestBody Map<String, Long> dados) {
+    public Permanencia registrarEntrada(
+            @RequestBody Map<String, Long> dados) {
+
         return service.registrarEntrada(
                 dados.get("idVeiculo"),
-                dados.get("idVaga"));
+                dados.get("idVaga")
+        );
     }
 
     @PutMapping("/{id}/saida")
@@ -41,9 +44,19 @@ public class PermanenciaController {
         return service.listar();
     }
 
+    @GetMapping("/faturamento")
+    public BigDecimal consultarFaturamento(
+            @RequestParam String inicio,
+            @RequestParam String fim) {
+
+        return service.calcularFaturamento(
+                java.time.LocalDateTime.parse(inicio),
+                java.time.LocalDateTime.parse(fim)
+        );
+    }
+
     @GetMapping("/{id}")
     public Permanencia buscarPorId(@PathVariable Long id) {
         return service.buscarPorId(id);
     }
-
-}//finalPermanenciaController
+}
