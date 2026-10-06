@@ -1,15 +1,26 @@
 # Sistema de Controle de Estacionamento 🚗🅿️
 
-## 1. Informações do participante
+## 1. Informações da equipe
 
-- **Responsável pelo projeto:** AlexCaitete
 - **Repositório:** https://github.com/AlexCaitete/sistema_estacionamento
 - **Disciplina:** Back-End
 - **Unidade:** 1
-- **Formato:** projeto individual
+- **Formato:** projeto em equipe com 7 participantes
 - **Entrega:** repositório público no GitHub e apresentação curta
 
-> Os dados de identificação presentes acima foram obtidos do repositório local e do GitHub. Caso o projeto seja entregue por outro participante ou grupo, os dados devem ser atualizados antes da apresentação.
+### Integrantes e funções
+
+| Integrante | Função no projeto |
+| --- | --- |
+| **Alex Alves Caitete** | Coordenação geral, modelagem das entidades, tipos, documentação e ajustes finais do projeto. |
+| **João Vitor Moreira dos Santos** | Implementação do `VeiculoController`, responsável pelas rotas de cadastro e consulta de veículos. |
+| **Mateus Mesquita** | Implementação do `PermanenciaService`, incluindo cálculo de faturamento e regras da permanência. |
+| **Nildson Nascimento** | Implementação dos controllers de vagas e permanências, além do fluxo de entrada e saída. |
+| **Arielle Domingos** | Implementação dos serviços de vaga e veículo e da lógica das classes de negócio. |
+| **Luiz Sérgio Ribeiro Pereira** | Implementação dos repositories de vagas e veículos. |
+| **Jonatas Lima** | Implementação da `PermanenciaRepository` e armazenamento das permanências. |
+
+> As informações foram obtidas através do histórico de commits e branches do repositório Git. Os nomes e as funções foram registrados conforme as alterações atribuídas a cada autor.
 
 ## 2. Descrição do projeto
 
