@@ -10,17 +10,16 @@
 
 ### Integrantes e funções
 
-| Integrante | Função no projeto |
-| --- | --- |
-| **Alex Alves Caitete** | Coordenação geral, modelagem das entidades, tipos, documentação e ajustes finais do projeto. |
+| Integrante                        | Função no projeto                                                                                 |
+| --------------------------------- | ------------------------------------------------------------------------------------------------- |
+| **Alex Alves Caitete**            | Coordenação geral, modelagem das entidades, tipos, documentação e ajustes finais do projeto.      |
 | **João Vitor Moreira dos Santos** | Implementação do `VeiculoController`, responsável pelas rotas de cadastro e consulta de veículos. |
-| **Mateus Mesquita** | Implementação do `PermanenciaService`, incluindo cálculo de faturamento e regras da permanência. |
-| **Nildson Nascimento** | Implementação dos controllers de vagas e permanências, além do fluxo de entrada e saída. |
-| **Arielle Domingos** | Implementação dos serviços de vaga e veículo e da lógica das classes de negócio. |
-| **Luiz Sérgio Ribeiro Pereira** | Implementação dos repositories de vagas e veículos. |
-| **Jonatas Lima** | Implementação da `PermanenciaRepository` e armazenamento das permanências. |
+| **Mateus Mesquita**               | Implementação do `PermanenciaService`, incluindo cálculo de faturamento e regras da permanência.  |
+| **Nildson Nascimento**            | Implementação dos controllers de vagas e permanências, além do fluxo de entrada e saída.          |
+| **Arielle Domingos**              | Implementação dos serviços de vaga e veículo e da lógica das classes de negócio.                  |
+| **Luiz Sérgio Ribeiro Pereira**   | Implementação dos repositories de vagas e veículos.                                               |
+| **Jonatas Lima**                  | Implementação da `PermanenciaRepository` e armazenamento das permanências.                        |
 
-> As informações foram obtidas através do histórico de commits e branches do repositório Git. Os nomes e as funções foram registrados conforme as alterações atribuídas a cada autor.
 
 ## 2. Descrição do projeto
 
@@ -191,19 +190,3 @@ git log --oneline --decorate --graph -10
 ## 11. Uso de inteligência artificial
 
 A implementação foi desenvolvida e revisada com apoio de ferramentas de inteligência artificial para análise de código, identificação de erros e melhoria da organização do projeto. A IA foi utilizada somente como auxiliar de desenvolvimento e revisão; todos os requisitos e regras de negócio foram avaliados antes da alteração.
-
-## 12. Entrega e apresentação
-
-Antes da entrega, confira:
-
-1. O repositório está público no GitHub;
-2. O projeto contém commits com histórico navegável;
-3. O README explica as funcionalidades e as regras;
-4. A aplicação compila e os testes executam;
-5. A apresentação explica a arquitetura, as regras implementadas e os resultados dos testes.
-
-## 13. Observações
-
-- A aplicação utiliza armazenamento em memória, portanto os dados são apagados ao reiniciar o processo;
-- As funcionalidades adicionais existentes no projeto foram preservadas;
-- A correção realizada no construtor de vagas garante que a disponibilidade recebida no cadastro seja respeitada.
