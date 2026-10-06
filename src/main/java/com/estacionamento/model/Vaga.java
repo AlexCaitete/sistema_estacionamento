@@ -10,7 +10,7 @@ public class Vaga {
     public Vaga(Long id, String numero, boolean disponivel, TipoVeiculo tipoVeiculo) {
         this.id = id;
         this.numero = numero;
-        this.disponivel = true;
+        this.disponivel = disponivel;
         this.tipoSuportado = tipoVeiculo;
     }
 
