@@ -20,7 +20,6 @@
 | **Luiz Sérgio Ribeiro Pereira**   | Implementação dos repositories de vagas e veículos.                                               |
 | **Jonatas Lima**                  | Implementação da `PermanenciaRepository` e armazenamento das permanências.                        |
 
-
 ## 2. Descrição do projeto
 
 Este projeto implementa um sistema de controle de estacionamento usando Java 21, Spring Boot, Maven e testes automatizados com JUnit. A aplicação controla veículos, vagas, entradas e saídas, calcula o valor da permanência e gera o faturamento de um período.
@@ -66,6 +65,58 @@ src/main/java/com/estacionamento
 ├── model/        Entidades e enumerações
 ├── repository/   Armazenamento em memória
 └── service/      Regras de negócio e validações
+```
+
+```mermaid
+classDiagram
+    class Veiculo {
+        +Long id
+        +String placa
+        +TipoVeiculo tipo
+        +String modelo
+    }
+
+    class Vaga {
+        +Long id
+        +String numero
+        +TipoVeiculo tipoVeiculo
+        +boolean disponivel
+    }
+
+    class Permanencia {
+        +Long id
+        +LocalDateTime entrada
+        +LocalDateTime saida
+        +Double valorPago
+        +registrarSaida(Double)
+    }
+
+    class TipoVeiculo {
+        <<enumeration>>
+        CARRO
+        MOTO
+    }
+
+    Veiculo --> TipoVeiculo
+    Vaga --> TipoVeiculo
+    Vaga "1" --> "0..1" Permanencia
+    Veiculo "1" --> "0..*" Permanencia
+```
+
+```mermaid
+flowchart LR
+    Cliente[Cliente / Requisição HTTP] --> Controller[Controller]
+    Controller --> Service[Service]
+    Service --> Model[Model]
+    Service --> Repository[Repository]
+    Repository --> Memoria[ArrayList em memória]
+
+    Model --> Service
+    Memoria --> Repository
+
+    Repository --> Service
+    Service --> Controller
+    Controller --> Resposta[Resposta HTTP]
 ```
 
 ### Model
